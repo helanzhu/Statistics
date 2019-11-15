@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xHH-CH-eOW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="首页" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vG-Au-E7K">
+                                <rect key="frame" x="132" y="518" width="150" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Py0-PD-DjR"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ruh-pR-b7a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="进入详情页"/>
+                                <connections>
+                                    <action selector="onEnterDetailPressed:" destination="GiB-Yv-OEE" eventType="touchUpInside" id="BCO-Tp-qmF"/>
+                                    <segue destination="MSK-Ky-Trh" kind="show" id="ft7-Eo-eWA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDn-f2-4oH">
+                                <rect key="frame" x="132" y="428" width="150" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qnx-DD-Tko"/>
+                                    <constraint firstAttribute="width" constant="150" id="yRu-ei-dKo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="分享"/>
+                                <connections>
+                                    <action selector="onSharedPressed:" destination="GiB-Yv-OEE" eventType="touchUpInside" id="LRq-HQ-uTb"/>
+                                    <action selector="onSharedPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAt-4I-Rb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-8Y-G4V">
+                                <rect key="frame" x="132" y="338" width="150" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="MJS-Om-Hcx"/>
+                                    <constraint firstAttribute="height" constant="40" id="iZw-C7-EPR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="收藏"/>
+                                <connections>
+                                    <action selector="onCollectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyj-tO-Zfa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势埋点" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoW-WN-jBE">
+                                <rect key="frame" x="132" y="608" width="150" height="80"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RNh-es-NBp"/>
+                                    <constraint firstAttribute="height" constant="80" id="S5c-4K-YeV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="LDn-f2-4oH" firstAttribute="top" secondItem="kgC-8Y-G4V" secondAttribute="bottom" constant="50" id="4Un-Ln-li3"/>
+                            <constraint firstItem="0vG-Au-E7K" firstAttribute="top" secondItem="LDn-f2-4oH" secondAttribute="bottom" constant="50" id="9oL-ba-jJA"/>
+                            <constraint firstItem="yoW-WN-jBE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gip-as-hu5"/>
+                            <constraint firstItem="LDn-f2-4oH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IRr-6N-cTd"/>
+                            <constraint firstItem="LDn-f2-4oH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R6X-1z-f3U"/>
+                            <constraint firstItem="yoW-WN-jBE" firstAttribute="top" secondItem="0vG-Au-E7K" secondAttribute="bottom" constant="50" id="eSE-0k-NZz"/>
+                            <constraint firstItem="kgC-8Y-G4V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlV-Xa-qT8"/>
+                            <constraint firstItem="0vG-Au-E7K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u3N-Xn-6Yx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3NN-XC-W6w"/>
+                    <connections>
+                        <outlet property="gestureLabel" destination="yoW-WN-jBE" id="oTL-sZ-ljt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="GiB-Yv-OEE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5942028985507" y="163.39285714285714"/>
+        </scene>
+        <!--详情页-->
+        <scene sceneID="Ht2-Bb-w5m">
+            <objects>
+                <viewController title="详情页" id="MSK-Ky-Trh" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Fz-ae-kSD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hyb-pp-v5b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Srs-iZ-5h7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8m-70-9tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6rV-nc-Sci">
+            <objects>
+                <navigationController id="xHH-CH-eOW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9ag-sA-vcr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ubm-tJ-3yv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywd-Tg-LLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="123"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DetailViewController</key>
+	<dict>
+		<key>PageEventIDs</key>
+		<dict>
+			<key>viewWillAppear:</key>
+			<string>PAGE_EVENT_COLLECTION_ENTER</string>
+			<key>viewWillDisappear:</key>
+			<string>PAGE_EVENT_COLLECTION_LEAVE</string>
+		</dict>
+		<key>ControlEventIDs</key>
+		<dict>
+			<key>onCollectPressed:</key>
+			<string>CTRL_EVENT_COLLECTION_COLLECT</string>
+			<key>tableView:didSelectRowAtIndexPath:</key>
+			<string>CTRL_EVENT_COLLECTION_CELL_SELECTED</string>
+		</dict>
+	</dict>
+	<key>HomeViewController</key>
+	<dict>
+		<key>PageEventIDs</key>
+		<dict>
+			<key>viewWillAppear:</key>
+			<string>PAGE_EVENT_HOME_ENTER</string>
+			<key>viewWillDisappear:</key>
+			<string>PAGE_EVENT_HOME_LEAVE</string>
+		</dict>
+		<key>ControlEventIDs</key>
+		<dict>
+			<key>gestureClicked:</key>
+			<string>CTRL_EVENT_HOME_GESTURE</string>
+			<key>onSharedPressed:</key>
+			<string>CTRL_EVENT_HOME_SHARE</string>
+			<key>onCollectPressed:</key>
+			<string>CTRL_EVENT_HOME_FAV</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
